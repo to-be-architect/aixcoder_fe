@@ -13,7 +13,7 @@ function OutputCodeEditor() {
 
   return (
     <div style={editorStyle}>
-      <Editor defaultLanguage="sql" defaultValue={code} theme={'vs-dark'} />
+      <Editor defaultLanguage="go" defaultValue={code} theme={'vs-dark'} />
     </div>
   );
 }
