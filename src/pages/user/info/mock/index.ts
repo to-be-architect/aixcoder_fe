@@ -25,7 +25,7 @@ setupMock({
             '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp',
         },
         {
-          name: '郑曦月',
+          name: '张一鸣',
           email: 'zhengxiyue@arco.design',
           avatar:
             '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/8361eeb82904210b4f55fab888fe8416.png~tplv-uwbnlip3yd-webp.webp',

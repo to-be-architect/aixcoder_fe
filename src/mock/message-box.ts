@@ -7,7 +7,7 @@ const getMessageList = () => {
     {
       id: 1,
       type: 'message',
-      title: '郑曦月',
+      title: '张一鸣',
       subTitle: '的私信',
       avatar:
         '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/8361eeb82904210b4f55fab888fe8416.png~tplv-uwbnlip3yd-webp.webp',
@@ -17,7 +17,7 @@ const getMessageList = () => {
     {
       id: 2,
       type: 'message',
-      title: '宁波',
+      title: '梁汝波',
       subTitle: '的回复',
       avatar:
         '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp',
@@ -28,7 +28,7 @@ const getMessageList = () => {
     {
       id: 3,
       type: 'message',
-      title: '宁波',
+      title: '梁汝波',
       subTitle: '的回复',
       avatar:
         '//p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp',
@@ -50,7 +50,7 @@ const getMessageList = () => {
       id: 5,
       type: 'todo',
       title: '内容审批通知',
-      content: '宁静提交于 2021-11-05，需要您在 2011-11-07之前审批',
+      content: '周受资提交于 2021-11-05，需要您在 2011-11-07之前审批',
       tag: {
         text: '进行中',
         color: 'arcoblue',

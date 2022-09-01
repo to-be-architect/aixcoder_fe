@@ -3,14 +3,7 @@ import InputCodeEditor1 from '@/components/Editor/InputCodeEditor1';
 import InputCodeEditor3 from '@/components/Editor/InputCodeEditor3';
 import OutputCodeEditor1 from '@/components/Editor/OutputCodeEditor1';
 import OutputCodeEditor3 from '@/components/Editor/OutputCodeEditor3';
-import {
-  Alert,
-  Button,
-  Card,
-  Divider,
-  Space,
-  Spin,
-} from '@arco-design/web-react';
+import { Alert, Button, Card, Divider, Spin } from '@arco-design/web-react';
 import axios from 'axios';
 import { loader } from '@monaco-editor/react';
 
@@ -33,56 +26,56 @@ export default function AIXCoder() {
 
       {/***************************************************************************************************/}
 
+      <Divider />
+
       <Card title={'请输入函数签名:'}>
         <InputCodeEditor1 />
-      </Card>
 
-      <Divider />
-      <Space size="medium">
+        <Divider />
+
         <Button
           onClick={() => handleGenerateCode1()}
           type="primary"
           loading={loading1}
           size="large"
         >
-          根据函数名生成代码
+          根据函数签名智能生成代码
         </Button>
         <Alert style={{ display: display1 }} type="success" content={text1} />
-      </Space>
 
-      <Divider />
+        <Divider />
 
-      <Spin loading={loading1} tip={'生成代码中...'}>
-        <OutputCodeEditor1 />
-      </Spin>
-
-      <Divider />
+        <Spin loading={loading1} tip={'生成代码中...'}>
+          <OutputCodeEditor1 />
+        </Spin>
+      </Card>
 
       {/***************************************************************************************************/}
 
-      <Card title={'请输入函数注释:'}>
-        <InputCodeEditor3 />
-      </Card>
-
       <Divider />
-      <Space size="medium">
+
+      <Card title={'请输入函数功能注释:'}>
+        <InputCodeEditor3 />
+
+        <Divider />
+
         <Button
           onClick={() => handleGenerateCode3()}
           type="primary"
           loading={loading3}
           size="large"
         >
-          根据自然语言注释生成代码
+          根据自然语言智能生成代码
         </Button>
 
         <Alert style={{ display: display3 }} type="success" content={text3} />
-      </Space>
 
-      <Divider />
+        <Divider />
 
-      <Spin loading={loading3} tip={'生成代码中...'}>
-        <OutputCodeEditor3 />
-      </Spin>
+        <Spin loading={loading3} tip={'生成代码中...'}>
+          <OutputCodeEditor3 />
+        </Spin>
+      </Card>
     </div>
   );
 
@@ -109,14 +102,13 @@ export default function AIXCoder() {
       .post(`http://127.0.0.1:8888/aix1`, body)
       .then((res) => {
         console.log(res.data);
-        y.setValue(res.data);
-
         setLoading1(false);
-
         const end = Date.now();
         const usingTime = (end - start) / 1000;
         setText1(`Using:${usingTime}s`);
         setDisplay1('');
+
+        y.setValue(res.data);
       })
       .finally(() => {
         // do nothing
@@ -168,8 +160,8 @@ export default function AIXCoder() {
     // 获取Monaco实例
     const editorRef = loader.__getMonacoInstance().editor;
     const models = editorRef.getModels();
-    const x = models[3]; //
-    const y = models[4]; //
+    const x = models[2];
+    const y = models[3];
     console.log(x.id);
     const xs = x.getValue();
     const body = {
@@ -181,14 +173,13 @@ export default function AIXCoder() {
       .post(`http://127.0.0.1:8888/aix3`, body)
       .then((res) => {
         console.log(res.data);
-        y.setValue(res.data);
-
         setLoading3(false);
-
         const end = Date.now();
         const usingTime = (end - start) / 1000;
         setText3(`Using:${usingTime}s`);
         setDisplay3('');
+
+        y.setValue(res.data);
       })
       .finally(() => {
         // do nothing

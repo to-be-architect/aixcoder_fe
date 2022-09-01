@@ -17,4 +17,4 @@ function InputCodeEditor3() {
 
 export default InputCodeEditor3;
 
-const code = `# print a 'hello world'`;
+const code = `# merge two binary tree`;

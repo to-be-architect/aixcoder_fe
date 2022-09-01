@@ -9,7 +9,7 @@ const editorStyle = {
 
 function OutputCodeEditor3() {
   const date = new Date();
-  const code = `# 根据自然语言注释智能生成代码 ${date}`;
+  const code = `# 根据自然语言智能生成代码 ${date}`;
 
   return (
     <div style={editorStyle}>

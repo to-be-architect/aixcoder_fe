@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../style/blocks.module.less';
 import { Card, Avatar, Typography, Skeleton } from '@arco-design/web-react';
+import { IconUser } from '@arco-design/web-react/icon';
 const { Text, Title } = Typography;
 
 export interface ProjectProps {
@@ -41,7 +42,8 @@ function ProjectCard(props: ProjectProps) {
             <Avatar.Group size={24}>
               {(contributors || []).map((item, index) => (
                 <Avatar key={index}>
-                  <img src={item.avatar} />
+                  {/*<img src={item.avatar} />*/}
+                  <IconUser />
                 </Avatar>
               ))}
             </Avatar.Group>

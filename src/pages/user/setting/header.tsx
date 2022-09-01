@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Button,
   Avatar,
-  Upload,
   Descriptions,
-  Tag,
-  Skeleton,
   Link,
+  Skeleton,
+  Tag,
+  Upload,
 } from '@arco-design/web-react';
-import { IconCamera, IconPlus } from '@arco-design/web-react/icon';
+import { IconCamera, IconUser } from '@arco-design/web-react/icon';
 import useLocale from '@/utils/useLocale';
 import locale from './locale';
 import styles from './style/header.module.less';
@@ -52,7 +51,8 @@ export default function Info({
             triggerIcon={<IconCamera />}
             className={styles['info-avatar']}
           >
-            {avatar ? <img src={avatar} /> : <IconPlus />}
+            {/*{avatar ? <img src={avatar} /> : <IconPlus />}*/}
+            <IconUser />
           </Avatar>
         )}
       </Upload>

@@ -17,4 +17,4 @@ function InputCodeEditor1() {
 
 export default InputCodeEditor1;
 
-const code = `func HelloWorld()`;
+const code = `func MergeTwoBinaryTree(t1 TreeNode, t2 TreeNode) (TreeNode, error)`;
