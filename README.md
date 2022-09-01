@@ -12,3 +12,9 @@ npm run dev
 // 构建
 npm run build
 ```
+
+## --allow-unrelated-histories
+
+```shell
+git pull o main --allow-unrelated-histories
+```
