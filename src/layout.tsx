@@ -1,19 +1,19 @@
-import React, { useState, useRef, useMemo, useEffect } from 'react';
-import { Switch, Route, Link, Redirect, useHistory } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb } from '@arco-design/web-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Link, Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import { Breadcrumb, Layout, Menu } from '@arco-design/web-react';
 import cs from 'classnames';
 import {
-  IconDashboard,
-  IconList,
-  IconSettings,
-  IconFile,
   IconApps,
   IconCheckCircle,
+  IconDashboard,
   IconExclamationCircle,
-  IconUser,
+  IconFile,
+  IconList,
   IconMenuFold,
   IconMenuUnfold,
+  IconSettings,
   IconTool,
+  IconUser,
 } from '@arco-design/web-react/icon';
 import { useSelector } from 'react-redux';
 import qs from 'query-string';
@@ -61,6 +61,7 @@ function getIconFromKey(key) {
 
 function getFlattenRoutes(routes) {
   const res = [];
+
   function travel(_routes) {
     _routes.forEach((route) => {
       if (route.key && !route.children) {
@@ -71,6 +72,7 @@ function getFlattenRoutes(routes) {
       }
     });
   }
+
   travel(routes);
   return res;
 }
@@ -90,7 +92,7 @@ function PageLayout() {
   const defaultOpenKeys = paths.slice(0, paths.length - 1);
 
   const [breadcrumb, setBreadCrumb] = useState([]);
-  const [collapsed, setCollapsed] = useState<boolean>(false);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   const [selectedKeys, setSelectedKeys] =
     useState<string[]>(defaultSelectedKeys);
   const [openKeys, setOpenKeys] = useState<string[]>(defaultOpenKeys);
@@ -109,6 +111,7 @@ function PageLayout() {
   function renderRoutes(locale) {
     const nodes = [];
     routeMap.current.clear();
+
     function travel(_routes, level, parentNode = []) {
       return _routes.map((route) => {
         const { breadcrumb = true } = route;
@@ -158,6 +161,7 @@ function PageLayout() {
         }
       });
     }
+
     travel(routes, 1);
     return nodes;
   }
@@ -220,7 +224,7 @@ function PageLayout() {
               </Menu>
             </div>
             <div className={styles['collapse-btn']} onClick={toggleCollapse}>
-              {collapsed ? <IconMenuUnfold /> : <IconMenuFold />}
+              {collapsed ? <IconMenuFold /> : <IconMenuUnfold />}
             </div>
           </Sider>
         )}
