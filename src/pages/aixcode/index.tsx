@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import InputCodeEditor1 from '@/components/Editor/InputCodeEditor1';
-import InputCodeEditor2 from '@/components/Editor/InputCodeEditor2';
 import InputCodeEditor3 from '@/components/Editor/InputCodeEditor3';
 import OutputCodeEditor1 from '@/components/Editor/OutputCodeEditor1';
-import OutputCodeEditor2 from '@/components/Editor/OutputCodeEditor2';
 import OutputCodeEditor3 from '@/components/Editor/OutputCodeEditor3';
 import {
   Alert,
@@ -31,7 +29,9 @@ export default function AIXCoder() {
 
   return (
     <div>
-      <h3>AIXCoder智能生成代码</h3>
+      <h3>aiXCoder智能生成代码</h3>
+
+      {/***************************************************************************************************/}
 
       <Card title={'请输入函数签名:'}>
         <InputCodeEditor1 />
@@ -45,42 +45,20 @@ export default function AIXCoder() {
           loading={loading1}
           size="large"
         >
-          根据函数名生成代码（简单）
+          根据函数名生成代码
         </Button>
         <Alert style={{ display: display1 }} type="success" content={text1} />
       </Space>
 
       <Divider />
 
-      <Spin loading={loading1} tip={'生成代码中...'} dot>
+      <Spin loading={loading1} tip={'生成代码中...'}>
         <OutputCodeEditor1 />
       </Spin>
 
       <Divider />
 
-      <Card title={'请输入函数签名:'}>
-        <InputCodeEditor2 />
-      </Card>
-
-      <Space size="medium">
-        <Button
-          onClick={() => handleGenerateCode2()}
-          type="primary"
-          loading={loading2}
-          size="large"
-        >
-          根据函数名生成代码（复杂）
-        </Button>
-        <Alert style={{ display: display2 }} type="success" content={text2} />
-      </Space>
-
-      <Divider />
-
-      <Spin loading={loading2} tip={'生成代码中...'} dot>
-        <OutputCodeEditor2 />
-      </Spin>
-
-      <Divider />
+      {/***************************************************************************************************/}
 
       <Card title={'请输入函数注释:'}>
         <InputCodeEditor3 />
@@ -102,7 +80,7 @@ export default function AIXCoder() {
 
       <Divider />
 
-      <Spin loading={loading3} tip={'生成代码中...'} dot>
+      <Spin loading={loading3} tip={'生成代码中...'}>
         <OutputCodeEditor3 />
       </Spin>
     </div>
@@ -148,38 +126,38 @@ export default function AIXCoder() {
   /**
    * 处理事件函数2
    */
-  function handleGenerateCode2() {
-    setLoading2(true);
-
-    // 获取Monaco实例
-    const editorRef = loader.__getMonacoInstance().editor;
-    const models = editorRef.getModels();
-    const x = models[2]; // 第3个editor
-    const y = models[3]; // 第4个editor
-    console.log(x.id);
-    const xs = x.getValue();
-    const body = {
-      x: xs,
-    };
-    const start = Date.now();
-    // 发送 post 查询请求
-    axios
-      .post(`http://127.0.0.1:8888/aix2`, body)
-      .then((res) => {
-        console.log(res.data);
-        y.setValue(res.data);
-
-        setLoading2(false);
-
-        const end = Date.now();
-        const usingTime = (end - start) / 1000;
-        setText2(`Using:${usingTime}s`);
-        setDisplay2('');
-      })
-      .finally(() => {
-        // do nothing
-      });
-  }
+  // function handleGenerateCode2() {
+  //     setLoading2(true);
+  //
+  //     // 获取Monaco实例
+  //     const editorRef = loader.__getMonacoInstance().editor;
+  //     const models = editorRef.getModels();
+  //     const x = models[2]; // 第3个editor
+  //     const y = models[3]; // 第4个editor
+  //     console.log(x.id);
+  //     const xs = x.getValue();
+  //     const body = {
+  //         x: xs,
+  //     };
+  //     const start = Date.now();
+  //     // 发送 post 查询请求
+  //     axios
+  //         .post(`http://127.0.0.1:8888/aix2`, body)
+  //         .then((res) => {
+  //             console.log(res.data);
+  //             y.setValue(res.data);
+  //
+  //             setLoading2(false);
+  //
+  //             const end = Date.now();
+  //             const usingTime = (end - start) / 1000;
+  //             setText2(`Using:${usingTime}s`);
+  //             setDisplay2('');
+  //         })
+  //         .finally(() => {
+  //             // do nothing
+  //         });
+  // }
 
   /**
    * 处理事件函数3
@@ -190,8 +168,8 @@ export default function AIXCoder() {
     // 获取Monaco实例
     const editorRef = loader.__getMonacoInstance().editor;
     const models = editorRef.getModels();
-    const x = models[4]; // 第5个editor
-    const y = models[5]; // 第6个editor
+    const x = models[3]; //
+    const y = models[4]; //
     console.log(x.id);
     const xs = x.getValue();
     const body = {

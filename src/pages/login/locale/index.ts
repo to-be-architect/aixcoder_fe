@@ -1,6 +1,6 @@
 const i18n = {
   'zh-CN': {
-    'login.form.title': '登录 AIXCoder',
+    'login.form.title': '登录 aiXCoder',
     'login.form.userName.errMsg': '用户名不能为空',
     'login.form.password.errMsg': '密码不能为空',
     'login.form.login.errMsg': '登录出错，轻刷新重试',
@@ -18,7 +18,7 @@ const i18n = {
     'login.banner.subSlogan3': '实现灵活的区块式开发',
   },
   'en-US': {
-    'login.form.title': 'Login to AIXCoder',
+    'login.form.title': 'Login to aiXCoder',
     'login.form.userName.errMsg': 'Username cannot be empty',
     'login.form.password.errMsg': 'Password cannot be empty',
     'login.form.login.errMsg': 'Login error, refresh and try again',

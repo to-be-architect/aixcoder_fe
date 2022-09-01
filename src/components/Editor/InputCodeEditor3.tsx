@@ -1,6 +1,5 @@
 import React from 'react';
 import Editor from '@monaco-editor/react';
-import styles from './style/index.module.less';
 
 const editorStyle = {
   width: '100%',
@@ -11,16 +10,11 @@ const editorStyle = {
 function InputCodeEditor3() {
   return (
     <div style={editorStyle}>
-      <Editor
-        defaultLanguage="python"
-        defaultValue={code}
-        theme={'light'}
-        className={styles['monoca-editor']}
-      />
+      <Editor defaultLanguage="python" defaultValue={code} theme={'light'} />
     </div>
   );
 }
 
 export default InputCodeEditor3;
 
-const code = `# write a hello world`;
+const code = `# print a 'hello world'`;

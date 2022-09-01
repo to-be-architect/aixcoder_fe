@@ -1,6 +1,6 @@
 const i18n = {
   'zh-CN': {
-    'menu.tool': 'AIXCoder',
+    'menu.tool': 'aiXCoder',
     'menu.tool.aixcode': 'AI 智能代码生成',
     'menu.tool.sql': 'SQL查询',
     'menu.dashboard': '仪表盘',
@@ -61,7 +61,7 @@ const i18n = {
     'navbar.search.placeholder': '输入内容查询',
   },
   'en-US': {
-    'menu.tool': 'AIXCode',
+    'menu.tool': 'aiXCoder',
     'menu.tool.aixcode': 'AI Code Generator',
     'menu.tool.sql': 'SQL Query',
     'menu.welcome': 'Welcome',

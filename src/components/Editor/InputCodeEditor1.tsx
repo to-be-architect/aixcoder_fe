@@ -1,6 +1,5 @@
 import React from 'react';
 import Editor from '@monaco-editor/react';
-import styles from './style/index.module.less';
 
 const editorStyle = {
   width: '100%',
@@ -11,12 +10,7 @@ const editorStyle = {
 function InputCodeEditor1() {
   return (
     <div style={editorStyle}>
-      <Editor
-        defaultLanguage="go"
-        defaultValue={code}
-        theme={'light'}
-        className={styles['monoca-editor']}
-      />
+      <Editor defaultLanguage="go" defaultValue={code} theme={'light'} />
     </div>
   );
 }
