@@ -21,6 +21,8 @@ https://arco.design/react/components/button
 
 ## 代码生成实例
 
+### 递归遍历树
+
 输入：
 
 ```go
@@ -60,6 +62,45 @@ func RecursiveVisitTreeNode(root *TreeNode, vistor func(int64)) error  {
     return nil
 }
 
+```
+
+### 递归合并两棵树
+
+输入：
+
+```go
+func MergeTwoBinaryTree(t1 TreeNode, t2 TreeNode) (TreeNode, error)
+```
+
+生成代码：
+
+```go
+// aiXCoder Output 3:
+func MergeTwoBinaryTree(t1 TreeNode, t2 TreeNode) (TreeNode, error)  {
+
+    newnode := TreeNode{}
+    if t1 == nil && t2 == nil {
+        return newnode, nil
+    }
+
+    if t1 == nil && t2!= nil {
+        return t2, nil
+    }
+    if t1!= nil && t2 == nil {
+        return t1, nil
+    }
+
+    if t1.Value == t2.Value {
+        newnode.Value = t1.Value
+    } else {
+        newnode.Value = t1.Value + t2.Value
+    }
+
+    newnode.Left, _ = MergeTwoBinaryTree(t1.Left, t2.Left)
+    newnode.Right, _ = MergeTwoBinaryTree(t1.Right, t2.Right)
+
+    return newnode, nil
+}
 ```
 
 附：完整的 5 个候选 Code：
