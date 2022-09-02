@@ -9,7 +9,16 @@ const editorStyle = {
 
 function OutputCodeEditorJava() {
   const date = new Date();
-  const code = `// 根据函数名智能生成代码 ${date}`;
+  const code = `// 根据函数名智能生成代码 ${date}
+// aiXCoder Output 5:
+public void visitTreeNode(TreeNode root,  visitor Visitor<TreeNode>)  {
+    visitor.visit(root);
+    List<TreeNode> children = root.getChildren();
+    for (TreeNode child : children) {
+        visitTreeNode(child, visitor);
+    }    
+}
+`;
 
   return (
     <div style={editorStyle}>

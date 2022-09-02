@@ -17,4 +17,4 @@ function InputCodeEditorJava() {
 
 export default InputCodeEditorJava;
 
-const code = `public CatagoryTreeNode BuildCategoryTree(List<CatagoryTreeNode> cateList,  String parentId){`;
+const code = `public void visitTreeNode(TreeNode root,  visitor Visitor<TreeNode>)`;

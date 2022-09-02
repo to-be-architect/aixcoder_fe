@@ -17,4 +17,4 @@ function InputCodeEditorKotlin() {
 
 export default InputCodeEditorKotlin;
 
-const code = `fun RecursiveVisitTreeNode(node: TreeNode, visitor: (TreeNode) -> Unit) `;
+const code = `fun visitTreeNode(root: TreeNode, visitor: (TreeNode) -> Unit) {`;

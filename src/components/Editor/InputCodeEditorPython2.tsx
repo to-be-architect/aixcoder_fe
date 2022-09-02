@@ -17,4 +17,4 @@ function InputCodeEditorPython2() {
 
 export default InputCodeEditorPython2;
 
-const code = `# merge twn binary tree`;
+const code = `# merge two binary tree`;

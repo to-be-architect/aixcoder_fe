@@ -7,7 +7,7 @@ const editorStyle = {
   border: '1px solid #ccc',
 };
 
-function OutputCodeEditorPython() {
+function OutputCodeEditorPython2() {
   const date = new Date();
   const code = `# 根据自然语言智能生成代码 ${date}
 class TreeNode:
@@ -56,4 +56,4 @@ print(result.val)
   );
 }
 
-export default OutputCodeEditorPython;
+export default OutputCodeEditorPython2;
