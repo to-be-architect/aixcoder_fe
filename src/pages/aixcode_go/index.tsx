@@ -50,7 +50,7 @@ export default function AIXCoder() {
 
         <Divider />
 
-        <Spin loading={loading} tip={'生成代码中...'}>
+        <Spin loading={loading || loading2} tip={'生成代码中...'}>
           <OutputCodeEditorGo />
         </Spin>
       </Card>

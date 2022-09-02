@@ -52,7 +52,7 @@ export default function AIXCoder() {
 
         <Divider />
 
-        <Spin loading={loading1} tip={'生成代码中...'}>
+        <Spin loading={loading1 || loading2} tip={'生成代码中...'}>
           <OutputCodeEditorPython />
         </Spin>
       </Card>
