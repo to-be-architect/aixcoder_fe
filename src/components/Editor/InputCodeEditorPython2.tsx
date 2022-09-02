@@ -7,14 +7,14 @@ const editorStyle = {
   border: '1px solid #ccc',
 };
 
-function InputCodeEditor1() {
+function InputCodeEditorPython2() {
   return (
     <div style={editorStyle}>
-      <Editor defaultLanguage="go" defaultValue={code} theme={'light'} />
+      <Editor defaultLanguage="python" defaultValue={code} theme={'light'} />
     </div>
   );
 }
 
-export default InputCodeEditor1;
+export default InputCodeEditorPython2;
 
-const code = `func MergeTwoBinaryTree(t1 TreeNode, t2 TreeNode) (TreeNode, error)`;
+const code = `# merge twn binary tree`;

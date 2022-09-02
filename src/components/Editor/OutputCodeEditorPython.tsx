@@ -7,15 +7,16 @@ const editorStyle = {
   border: '1px solid #ccc',
 };
 
-function OutputCodeEditor2() {
+function OutputCodeEditorPython() {
   const date = new Date();
-  const code = `// 根据函数名智能生成代码（复杂） ${date}`;
+  const code = `# 根据函数签名智能生成代码 ${date}
+  `;
 
   return (
     <div style={editorStyle}>
-      <Editor defaultLanguage="go" defaultValue={code} theme={'light'} />
+      <Editor defaultLanguage="python" defaultValue={code} theme={'light'} />
     </div>
   );
 }
 
-export default OutputCodeEditor2;
+export default OutputCodeEditorPython;

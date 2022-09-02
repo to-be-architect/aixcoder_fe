@@ -14,8 +14,29 @@ export const routes: Route[] = [
     key: 'tool',
     children: [
       {
-        name: 'menu.tool.aixcode',
-        key: 'aixcode',
+        name: 'menu.tool.aixcode_go',
+        key: 'aixcode_go',
+      },
+      {
+        name: 'menu.tool.aixcode_kotlin',
+        key: 'aixcode_kotlin',
+      },
+      {
+        name: 'menu.tool.aixcode_java',
+        key: 'aixcode_java',
+      },
+      {
+        name: 'menu.tool.aixcode_python',
+        key: 'aixcode_python',
+      },
+      {
+        name: 'menu.tool.aixcode_javascript',
+        key: 'aixcode_javascript',
+      },
+
+      {
+        name: 'menu.tool.aixcode_c',
+        key: 'aixcode_c',
       },
       // {
       //   name: 'menu.tool.sql',

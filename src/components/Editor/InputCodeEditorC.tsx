@@ -7,14 +7,14 @@ const editorStyle = {
   border: '1px solid #ccc',
 };
 
-function InputCodeEditor3() {
+function InputCodeEditorC() {
   return (
     <div style={editorStyle}>
-      <Editor defaultLanguage="python" defaultValue={code} theme={'light'} />
+      <Editor defaultLanguage="c" defaultValue={code} theme={'light'} />
     </div>
   );
 }
 
-export default InputCodeEditor3;
+export default InputCodeEditorC;
 
-const code = `# merge two binary tree`;
+const code = `int quick_sort(int *a,int low,int high)`;

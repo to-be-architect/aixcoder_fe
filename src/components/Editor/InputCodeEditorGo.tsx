@@ -7,7 +7,7 @@ const editorStyle = {
   border: '1px solid #ccc',
 };
 
-function InputCodeEditor2() {
+function InputCodeEditorGo() {
   return (
     <div style={editorStyle}>
       <Editor defaultLanguage="go" defaultValue={code} theme={'light'} />
@@ -15,6 +15,6 @@ function InputCodeEditor2() {
   );
 }
 
-export default InputCodeEditor2;
+export default InputCodeEditorGo;
 
-const code = `func HelloWorld()`;
+const code = `func MergeTwoBinaryTree(t1 TreeNode, t2 TreeNode) (TreeNode, error)`;

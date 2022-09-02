@@ -1,7 +1,13 @@
 const i18n = {
   'zh-CN': {
     'menu.tool': 'aiXCoder',
-    'menu.tool.aixcode': 'AI 智能代码',
+    'menu.tool.aixcode_c': 'C',
+    'menu.tool.aixcode_go': 'Go',
+    'menu.tool.aixcode_java': 'Java',
+    'menu.tool.aixcode_javascript': 'JavaScript',
+    'menu.tool.aixcode_kotlin': 'Kotlin',
+    'menu.tool.aixcode_python': 'Python',
+
     'menu.tool.sql': 'SQL查询',
     'menu.dashboard': '仪表盘',
     'menu.list': '列表页',
@@ -62,7 +68,13 @@ const i18n = {
   },
   'en-US': {
     'menu.tool': 'aiXCoder',
-    'menu.tool.aixcode': 'AI Code',
+    'menu.tool.aixcode_c': 'C',
+    'menu.tool.aixcode_go': 'Go',
+    'menu.tool.aixcode_java': 'Java',
+    'menu.tool.aixcode_javascript': 'JavaScript',
+    'menu.tool.aixcode_kotlin': 'Kotlin',
+    'menu.tool.aixcode_python': 'Python',
+
     'menu.tool.sql': 'SQL Query',
     'menu.welcome': 'Welcome',
     'menu.dashboard': 'Dashboard',
