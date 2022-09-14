@@ -86,7 +86,7 @@ export default function AIXCoder() {
         setText(`Using:${usingTime}s`);
         setDisplay('');
 
-        y.setValue(res.data);
+        y.setValue(`${xs}${res.data}`);
       })
       .finally(() => {
         // do nothing
@@ -121,7 +121,7 @@ export default function AIXCoder() {
         setText(`Using:${usingTime}s`);
         setDisplay('');
 
-        y.setValue(res.data);
+        y.setValue(`${xs}${res.data}`);
       })
       .finally(() => {
         // do nothing
